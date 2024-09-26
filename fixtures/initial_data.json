@@ -1,0 +1,21 @@
+[
+    {
+        "model": "my_django_project.mymodel",
+        "pk": 1,
+        "fields": {
+            "name": "Test Product",
+            "description": "Description of the test product",
+            "price": 29.99
+        }
+    },
+    {
+        "model": "my_django_project.mymodel",
+        "pk": 2,
+        "fields": {
+            "name": "Another Product",
+            "description": "Description of another product",
+            "price": 39.99
+        }
+    }
+]
+

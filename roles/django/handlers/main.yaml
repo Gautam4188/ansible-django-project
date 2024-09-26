@@ -1,0 +1,6 @@
+---
+- name: python code updated
+  command: /home/ansible/ansible-django-project1/my_django_local_repo/manage.py migrate  # Update to your actual command
+  args:
+    chdir: "{{ django_app_root }}"
+

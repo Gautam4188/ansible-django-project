@@ -1,0 +1,23 @@
+---
+- hosts: dev  # Specify your target hosts here
+  become: true  # Use sudo
+  vars_files:
+    - group_vars/all.yaml  # Ensure your variable file is loaded
+
+  tasks:
+    - name: Check if requirements.txt exists
+      stat:
+        path: "{{ django_pip_dependencies }}"
+      register: req_file
+
+    - name: Fail if requirements.txt does not exist
+      fail:
+        msg: "The requirements file does not exist at {{ django_pip_dependencies }}"
+      when: not req_file.stat.exists
+
+  roles:
+    - django  # Include the django role
+
+  vars:
+    django_pip_dependencies: /home/ansible/ansible-django-project1/requirements.txt  # Adjust this path if necessary
+

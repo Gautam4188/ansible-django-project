@@ -1,0 +1,15 @@
+django_root: /home/ansible/ansible-django-project1
+django_app_root: /home/ansible/ansible-django-project1/my_django_project  # This path should have manage.py
+django_project_module: my_django_project
+django_push_mode: sync
+django_local_repo_root: /home/ansible/ansible-django-project1/my_django_local_repo
+django_pip_dependencies: /home/ansible/ansible-django-project1/requirements.txt
+user: ansible
+django_debug: false
+django_cors: true
+django_memcached_locations: true
+django_static_collection_args: '--noinput'
+django_initial_data_fixture:
+  load: true
+  path: /home/ansible/ansible-django-project1/fixtures/initial_data.json
+
